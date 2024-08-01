@@ -5,11 +5,14 @@ import React from "react";
 import Image from "next/image";
 import { Product } from "@/types/products";
 import sharedStyles from '../styles/sharedStyles.module.css';
+import Link from "next/link";
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const productSlug = product.title.toLowerCase().replace(/ /g, '-');
+
   const handleAddToWishList = () => {
     console.log("Added to wish list:", product.title);
   };
@@ -24,7 +27,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <article className="product">
-      <div className="product__top">
+      <Link href={`/product/${product.id}-${productSlug}`} className="product__top">
         <div className="product__new">New</div>
         <Image 
           src={product.thumbnail} 
@@ -54,7 +57,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             </li>
           </ul>
         </div>
-      </div>
+      </Link>
       <div className="product__bottom d-flex jc-sb">
         <div className="product__desc">
           <h3 className="product__name">{product.title}</h3>
