@@ -1,5 +1,7 @@
 const express = require('express');
 const next = require('next');
+import { Request, Response } from "express";
+
 
 const dev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev });
@@ -8,11 +10,8 @@ const handle = nextApp.getRequestHandler();
 nextApp.prepare().then(() => {
   const app = express();
 
-  app.get('/api/test', (req:any, res:any) => {
-    res.json({ message: 'Hello from Express!!' });
-  });
 
-  app.all('*', (req:any, res:any) => {
+  app.all('*', (req:Request, res:Response) => {
     return handle(req, res);
   });
 
