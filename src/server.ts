@@ -9,7 +9,7 @@ nextApp.prepare().then(() => {
   const app = express();
 
   app.get('/api/test', (req:any, res:any) => {
-    res.json({ message: 'Hello from Express!' });
+    res.json({ message: 'Hello from Express!!' });
   });
 
   app.all('*', (req:any, res:any) => {
