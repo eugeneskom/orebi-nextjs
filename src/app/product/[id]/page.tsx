@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { useParams } from "next/navigation";
+import ProductTabs from "@/app/components/product/ProductTabs";
 
 async function getProductById(id: string) {
   const res = await fetch(`https://dummyjson.com/products/${id}`);
@@ -164,60 +165,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
               </div>
             </li>
           </ul>
-          <div className="tabs">
-            <div className="tabs__nav d-flex">
-              <button className="tabs__link" data-tab-name="tab-1">
-                Description
-              </button>
-              <button className="tabs__link is-active" data-tab-name="tab-2">
-                Reviews(1)
-              </button>
-            </div>
-            <div className="tabs__content">
-              <div className="tab tab-1">
-                <p className="tab__caption">Description of the product</p>
-                <div className="tab__description">
-                  <p>{product.description}</p>
-                </div>
-              </div>
-              <div className="tab  is-active tab-2">
-                <p className="tab__caption">1 review for Product</p>
-                <div className="comments">
-                  <div className="comments__top d-flex ai-c">
-                    <p className="comments__name">John Ford</p>
-                    <div className="comments__rate" />
-                    <div className="comments__date">
-                      <p>6 months ago</p>
-                    </div>
-                  </div>
-                  <div className="tab__description">
-                    <p>
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
-                      centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                    </p>
-                  </div>
-                </div>
-                <form className="form">
-                  <p className="form__caption">Add a Review</p>
-                  <label className="form__label">
-                    Name
-                    <input className="form__input form__input--medium" type="text" placeholder="Your name here" />
-                  </label>
-                  <label className="form__label">
-                    Email
-                    <input className="form__input form__input--medium" type="email" placeholder="Your email here" />
-                  </label>
-                  <label className="form__label">
-                    Review
-                    <textarea className="form__textarea form__textarea--medium" placeholder="Your review here" />
-                  </label>
-                  <button className="btn btn--big" type="submit">
-                    Post
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
+          <ProductTabs description={product.description} title={product.title}/>
         </section>
       </div>
     </main>
