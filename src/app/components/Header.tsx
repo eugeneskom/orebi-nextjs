@@ -1,42 +1,42 @@
 import React from "react";
-
+import Link from "next/link";
 function Header() {
   return (
     <header className="header">
       <div className="container">
         <nav className="header__nav d-flex jc-sb">
-          <a className="logo" href="#">
+          <Link className="logo" href="/">
             <img src="images/logo.svg" alt="logo of the webpage" width="65" height="15" />
-          </a>
+          </Link>
           <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon">
             <span className="navicon"></span>
           </label>
           <ul className="menu d-flex">
             <li className="menu__item">
-              <a href="index.html" className="menu__link">
+              <Link href="/" className="menu__link">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="shop.html" className="menu__link">
+              <Link href="/shop" className="menu__link">
                 Shop
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="about.html" className="menu__link">
+              <Link href="/about" className="menu__link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="contacts.html" className="menu__link">
+              <Link href="/contact" className="menu__link">
                 Contacts
-              </a>
+              </Link>
             </li>
             <li className="menu__item">
-              <a href="journal-page.html" className="menu__link">
+              <Link href="/journal" className="menu__link">
                 Journal
-              </a>
+              </Link>
             </li>
           </ul>
           <form className="nav-lang">
