@@ -54,7 +54,7 @@ async function Shop({ searchParams }: ShopPageProps) {
           <Breadcrumbs />
           <section className="products">
             <div className="products__inner d-flex jc-sb">
-              <a className="products__filter-btn" href="#filters">
+              <a className="products__filter-btn" href="#filters" >
                 <Image fill className="products__btn-svg" src="/images/icons/filter-btn.svg" alt="" />
               </a>
               <ul className="filters" id="filters">
@@ -215,12 +215,19 @@ async function Shop({ searchParams }: ShopPageProps) {
               <div className="shop-content">
                 <div className="shop-content__filter  d-flex jc-sb">
                   <div className="shop-content__buttons d-flex">
-                    <button className="shop-content__btn button-grid shop-content__btn--active">
+                    <button 
+                    className="shop-content__btn button-grid shop-content__btn--active"
+                    type="button"
+                    >
                       <svg className="shop-content__svg">
                         <use xlinkHref="sprite.svg#grid-filter-btn" />
                       </svg>
                     </button>
-                    <button className="shop-content__btn button-list d-flex jc-c ai-c">
+                    <button 
+                    className="shop-content__btn button-list d-flex jc-c ai-c"
+                    type="button"
+                    
+                    >
                       <svg className="shop-content__svg">
                         <use xlinkHref="sprite.svg#grid-list-btn" />
                       </svg>

@@ -18,13 +18,22 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </div>
         <div className={`absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-all duration-300 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"} md:opacity-0 md:group-hover:opacity-100 sm:opacity-100 sm:bg-opacity-0 sm:pointer-events-none md:pointer-events-auto`}>
           <div className="flex space-x-4">
-            <button className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
+            <button 
+                    type="button"
+
+            className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
               <HeartIcon className="h-6 w-6" />
             </button>
-            <button className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
+            <button 
+                    type="button"
+
+            className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
               <ArrowsRightLeftIcon className="h-6 w-6" />
             </button>
-            <button className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
+            <button 
+                    type="button"
+
+            className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
               <ShoppingCartIcon className="h-6 w-6" />
             </button>
           </div>
