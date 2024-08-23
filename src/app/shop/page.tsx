@@ -5,6 +5,7 @@ import { Product } from "@/types/products";
 import { getProducts } from "@/libs";
 import Search from "../components/Search";
 import Breadcrumbs from "../components/Breadcrumbs";
+import Pagination from "../components/filters/Pagination";
 
 // Define the shape of the search params
 type SearchParams = {
@@ -55,6 +56,7 @@ async function Shop({ searchParams }: ShopPageProps) {
           <section className="products">
             <div className="products__inner d-flex jc-sb">
               <button type="button" className="products__filter-btn">
+                <span className="sr-only">Product filter button</span>
                 <Image fill className="products__btn-svg" src="/images/icons/filter-btn.svg" alt="" />
               </button>
               <ul className="filters" id="filters">
@@ -255,43 +257,13 @@ async function Shop({ searchParams }: ShopPageProps) {
                 <ul className="shop-products d-flex jc-sb fw-w">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {products.map((product) => (
-                      <ProductCard key={product.id} product={product} />
+                      <li key={product.id} className="list-none">
+                        <ProductCard product={product} />
+                      </li>
                     ))}
                   </div>
                 </ul>
-                <div className="pagination d-flex jc-sb">
-                  <ul className="pagination__list d-flex">
-                    <li className="pagination__item">
-                      <span className="pagination__link pagination__link--active">1</span>
-                    </li>
-                    <li className="pagination__item">
-                      <a className="pagination__link" href="#">
-                        2
-                      </a>
-                    </li>
-                    <li className="pagination__item">
-                      <a className="pagination__link" href="#">
-                        3
-                      </a>
-                    </li>
-                    <li className="pagination__item">
-                      <a className="pagination__link" href="#">
-                        4
-                      </a>
-                    </li>
-                    <li className="pagination__item">
-                      <span className="pagination__link">...</span>
-                    </li>
-                    <li className="pagination__item">
-                      <a className="pagination__link" href="#">
-                        10
-                      </a>
-                    </li>
-                  </ul>
-                  <p>
-                    Products from <span>1</span> to <span>12</span> of <span>80</span>
-                  </p>
-                </div>
+                <Pagination page={page} totalPages={totalPages} itemsPerPage={limit} totalItems={total} />
               </div>
             </div>
           </section>

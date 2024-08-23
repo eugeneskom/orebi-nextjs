@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import { Product } from "@/types/products";
 import { ArrowsRightLeftIcon, HeartIcon, ShoppingCartIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
