@@ -16,12 +16,14 @@ export default function ProductTabs({ description,title }: ProductTabsProps) {
         <button 
           className={`tabs__link ${activeTab === 'tab-1' ? 'is-active' : ''}`} 
           onClick={() => setActiveTab('tab-1')}
+          type='button'
         >
           Description
         </button>
         <button 
           className={`tabs__link ${activeTab === 'tab-2' ? 'is-active' : ''}`}
           onClick={() => setActiveTab('tab-2')}
+          type='button'
         >
           Reviews(1)
         </button>

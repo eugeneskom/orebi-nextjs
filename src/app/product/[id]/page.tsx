@@ -89,23 +89,23 @@ export default async function ProductPage({ params }: { params: { id: string } }
             <ul className="product-filters__list">
               <li className="product-filters__item product-filters__color d-flex ai-c">
                 <form className="product-filters__form d-flex ai-c">
-                  <label className="product-filters__label" htmlFor="">
+                  <label className="product-filters__label">
                     <input className="product-filters__input" type="radio" name="color" />
                     <span className="product-filters__checkbox product-filters__checkbox--gray" />
                   </label>
-                  <label className="product-filters__label" htmlFor="">
+                  <label className="product-filters__label">
                     <input className="product-filters__input" type="radio" name="color" />
                     <span className="product-filters__checkbox product-filters__checkbox--lightred" />
                   </label>
-                  <label className="product-filters__label" htmlFor="">
+                  <label className="product-filters__label">
                     <input className="product-filters__input" type="radio" name="color" />
                     <span className="product-filters__checkbox product-filters__checkbox--lightgreen" />
                   </label>
-                  <label className="product-filters__label" htmlFor="">
+                  <label className="product-filters__label">
                     <input className="product-filters__input" type="radio" name="color" />
                     <span className="product-filters__checkbox product-filters__checkbox--lightgray" />
                   </label>
-                  <label className="product-filters__label" htmlFor="">
+                  <label className="product-filters__label">
                     <input className="product-filters__input" type="radio" name="color" />
                     <span className="product-filters__checkbox product-filters__checkbox--lightblue" />
                   </label>
@@ -115,7 +115,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
                 <form className="product-filters__form" action="">
                   <label>
                     <span className="sr-only">Select size</span>
-                    <select name="" id="" className="select">
+                    <select  className="select">
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
