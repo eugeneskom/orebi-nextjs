@@ -4,6 +4,27 @@ import SearchForm from "./filters/SearchForm";
 import { Suspense } from "react";
 import Image from "next/image";
 
+
+function SearchFormSkeleton() {
+  return (
+    <form className="search @@small-form @@big-form @@error d-flex  ai-c">
+    <label className="search__label">
+      <span className="sr-only">Search input field</span>
+      <input className="search__input @@small-input @@big-input" type="search" placeholder="Search Products" 
+      />
+    </label>
+    <button className="search__btn" type="submit">
+      <svg className="search__icon">
+        <use xlinkHref="sprite.svg#search" />
+      </svg>
+
+      <span className="sr-only">Search button</span>
+    </button>
+  </form>
+  );
+}
+
+
 function Search() {
   return (
     <div className="header__bottom">
@@ -14,7 +35,7 @@ function Search() {
           </div>
 
           <div className="header__col">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<SearchFormSkeleton />}>
               <SearchForm />
             </Suspense>
           </div>

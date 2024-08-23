@@ -6,7 +6,6 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 function SearchForm() {
   const searchParams = useSearchParams() as URLSearchParams;
   const pathname = usePathname();
-  const { replace } = useRouter();
   const router = useRouter();
 
   function handleSearch(term: string) {
@@ -17,9 +16,6 @@ function SearchForm() {
       params.delete("query");
     }
     console.log("handleSearch", term, params.toString());
-    // replace(`${pathname}?${params.toString()}`);
-    const usl = `${pathname}?${params.toString()}`;
-    // console.log(usl);
     router.push(`${pathname}?${params.toString()}`);
   }
 
