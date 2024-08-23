@@ -254,15 +254,15 @@ async function Shop({ searchParams }: ShopPageProps) {
                   </form>
                 </div>
                 <h2 className="sr-only">Products list</h2>
-                <ul className="shop-products d-flex jc-sb fw-w">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="shop-products d-flex jc-sb fw-w">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {products.map((product) => (
                       <li key={product.id} className="list-none">
                         <ProductCard product={product} />
                       </li>
                     ))}
-                  </div>
-                </ul>
+                  </ul>
+                </div>
                 <Pagination page={page} totalPages={totalPages} itemsPerPage={limit} totalItems={total} />
               </div>
             </div>
