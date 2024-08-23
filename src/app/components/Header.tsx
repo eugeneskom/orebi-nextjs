@@ -1,14 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "./images/logo.svg";
 function Header() {
   return (
     <header className="header">
       <div className="container">
         <nav className="header__nav d-flex jc-sb">
           <Link className="logo" href="/">
-            <Image src={logo} alt="logo of the webpage" width="65" height="15" />
+            <Image src={`./images/logo.svg`} alt="logo of the webpage" width="65" height="15" />
           </Link>
           <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon">
