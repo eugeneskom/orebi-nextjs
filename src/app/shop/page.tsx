@@ -28,7 +28,7 @@ async function Shop({ searchParams }: ShopPageProps) {
   // console.log("productsData", productsData);
 
   const page = Number(searchParams.page) || 1;
-  const limit = Number(searchParams.limit) || 20;
+  const limit = Number(searchParams.limit) || 10;
   const search = searchParams.query || null;
   const category = searchParams.category;
   const minPrice = searchParams.minPrice ? Number(searchParams.minPrice) : undefined;
