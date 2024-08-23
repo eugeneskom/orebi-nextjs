@@ -1,10 +1,10 @@
-import './style.min.css';
-import './globals.css';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import './styles/globals.css';
+import './styles/style.min.css'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
