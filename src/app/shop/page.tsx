@@ -233,18 +233,10 @@ async function Shop({ searchParams }: ShopPageProps) {
                       {" "}
                       <span>Sort by:</span>
                       <select name="" id="" className="shop-content__select-by select-style text-black p-4">
-                        <option value={1}>
-                          <span className="p-4">Featured</span>
-                        </option>
-                        <option value={1}>
-                          <span className="p-4">2</span>
-                        </option>
-                        <option value={1}>
-                          <span className="p-4">3</span>
-                        </option>
-                        <option value={1}>
-                          <span className="p-4">4</span>
-                        </option>
+                        <option value={1}>Featured</option>
+                        <option value={1}>2</option>
+                        <option value={1}>3</option>
+                        <option value={1}>4</option>
                       </select>
                     </label>
                     <label>
