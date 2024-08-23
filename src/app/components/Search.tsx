@@ -2,6 +2,7 @@ import React from "react";
 import Category from "./filters/Category";
 import SearchForm from "./filters/SearchForm";
 import { Suspense } from "react";
+import Image from "next/image";
 
 function Search() {
   return (
@@ -38,7 +39,7 @@ function Search() {
                 <div className="cart__inner dropdown">
                   <div className="cart__top d-flex">
                     <div className="cart__photo">
-                      <img className="cart__img" width="80" height="80" src="images/content/black-smart-w.jpg" alt="Black Smart Watch" />
+                      <Image className="cart__img" width="80" height="80" src="/images/content/black-smart-w.jpg" alt="Black Smart Watch" />
                     </div>
                     <div className="cart__desc">
                       <p className="cart__title">Black Smart Watch</p>
@@ -50,7 +51,7 @@ function Search() {
                   </div>
                   <div className="cart__top d-flex">
                     <div className="cart__photo">
-                      <img className="cart__img" width="80" height="80" src="images/content/black-smart-w.jpg" alt="Black Smart Watch" />
+                      <Image className="cart__img" width="80" height="80" src="/images/content/black-smart-w.jpg" alt="Black Smart Watch" />
                     </div>
                     <div className="cart__desc">
                       <p className="cart__title">Black Smart Watch</p>
@@ -61,7 +62,7 @@ function Search() {
                   </div>
                   <div className="cart__top d-flex">
                     <div className="cart__photo">
-                      <img className="cart__img" width="80" height="80" src="images/content/black-smart-w.jpg" alt="Black Smart Watch" />
+                      <Image className="cart__img" width="80" height="80" src="/images/content/black-smart-w.jpg" alt="Black Smart Watch" />
                     </div>
                     <div className="cart__desc">
                       <p className="cart__title">Black Smart Watch</p>
