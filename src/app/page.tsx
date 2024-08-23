@@ -8,18 +8,20 @@ import Special from "./components/Special";
 import Brands from "./components/Brands";
 import Journal from "./components/Journal";
 import BestProducts from "./components/BestProducts";
+import Search from "./components/Search";
 export default function Home() {
   return (
     <>
       <main className="main">
+        <Search />
         <Hero />
-        <Sale/>
-        <NewProducts/>
-        <BestProducts/>
-        <BestSeller/>
-        <Special/>
-        {/* <Brands/> */}
-        {/* <Journal/> */}
+        <Sale />
+        <NewProducts />
+        <BestProducts />
+        <BestSeller />
+        <Special />
+        <Brands/>
+        <Journal/>
       </main>
     </>
   );

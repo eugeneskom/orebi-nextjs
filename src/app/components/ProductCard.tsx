@@ -10,7 +10,6 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
-  console.log(" ", product);
   return (
     <Link href={`/product/${product.id}-${product.title.toLowerCase().replace(/ /g, "-")}`} className="group flex flex-col h-full bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-in-out hover:shadow-xl" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className="relative flex-grow">

@@ -7,7 +7,6 @@ import ProductTabs from "@/app/components/product/ProductTabs";
 
 async function getProductById(id: string) {
   const res = await fetch(`https://dummyjson.com/products/${id}`);
-  console.log("getProductById", res.ok, id);
   if (!res.ok) {
     return null;
   }
@@ -17,10 +16,8 @@ async function getProductById(id: string) {
 export default async function ProductPage({ params }: { params: { id: string } }) {
   // Extract the numeric ID from the start of the string
   const id = params.id.split("-")[0];
-  console.log(params, "params", id);
 
   const product = await getProductById(id);
-  console.log("productproduct", product);
   if (!product) {
     notFound();
   }

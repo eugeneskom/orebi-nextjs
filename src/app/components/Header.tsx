@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Search from "./Search";
 function Header() {
   return (
     <header className="header">
@@ -52,7 +53,8 @@ function Header() {
         </nav>
       </div>
 
-      <div className="header__bottom">
+
+      {/* <div className="header__bottom">
         <div className="container">
           <div className="header__inner d-flex jc-sb ai-c fw-w">
             <div className="header__col">
@@ -1201,7 +1203,7 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 }

@@ -5,9 +5,8 @@ import { getProducts } from '@/libs';
 import { Product } from '@/types/products';
 
 async function Special() {
-  const productsData = await getProducts();
+  const productsData = await getProducts({ page: 1 , query: null});
   const products: Product[] = productsData.products.slice(0, 4); // Limit to 4 products for this example
-  console.log("productsData", productsData);
   return (
     <section className="special">
     <div className="container">

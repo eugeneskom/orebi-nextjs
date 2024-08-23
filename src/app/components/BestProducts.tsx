@@ -5,9 +5,8 @@ import ProductCard from "./ProductCard";
 import { getProducts } from "@/libs";
 
 async function BestProducts() {
-  const productsData = await getProducts();
+  const productsData = await getProducts({ page: 1 , query: null});
   const products: Product[] = productsData.products.slice(0, 4); // Limit to 4 products for this example
-  console.log("productsData", productsData);
   return (
     <section className="best">
       <div className="container">

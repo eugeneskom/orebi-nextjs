@@ -5,9 +5,8 @@ import { Product } from "@/types/products";
 import { getProducts } from "@/libs";
 
 export default async function NewProducts() {
-  const productsData = await getProducts();
+  const productsData = await getProducts({ page: 1 , query: null});
   const products: Product[] = productsData.products.slice(0, 4); // Limit to 4 products for this example
-  console.log("productsData", productsData);
   return (
     <section className="new">
       <div className="bg-gray-100 py-16">
