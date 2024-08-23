@@ -26,18 +26,21 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
             className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
               <HeartIcon className="h-6 w-6" />
+              <span className="sr-only">Add to wishlist</span>
             </button>
             <button 
                     type="button"
 
             className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
               <ArrowsRightLeftIcon className="h-6 w-6" />
+              <span className="sr-only">Compare</span>
             </button>
             <button 
                     type="button"
 
             className="p-2 bg-white rounded-full text-gray-800 hover:bg-gray-100 transition-colors">
               <ShoppingCartIcon className="h-6 w-6" />
+              <span className="sr-only">Buy</span>
             </button>
           </div>
         </div>

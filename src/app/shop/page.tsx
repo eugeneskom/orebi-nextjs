@@ -218,10 +218,12 @@ async function Shop({ searchParams }: ShopPageProps) {
                     <button 
                     className="shop-content__btn button-grid shop-content__btn--active"
                     type="button"
+                    
                     >
                       <svg className="shop-content__svg">
                         <use xlinkHref="sprite.svg#grid-filter-btn" />
                       </svg>
+                      <span className="sr-only">Display products in grid</span>
                     </button>
                     <button 
                     className="shop-content__btn button-list d-flex jc-c ai-c"
@@ -231,6 +233,7 @@ async function Shop({ searchParams }: ShopPageProps) {
                       <svg className="shop-content__svg">
                         <use xlinkHref="sprite.svg#grid-list-btn" />
                       </svg>
+                      <span className="sr-only">Display products list</span>
                     </button>
                   </div>
                   <form className="shop-content__form d-flex" action="">
