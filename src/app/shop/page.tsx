@@ -39,7 +39,7 @@ async function Shop({ searchParams }: ShopPageProps) {
     limit,
     category,
     minPrice,
-    maxPrice
+    maxPrice,
   });
 
   // console.log("products", products.length);
@@ -54,7 +54,7 @@ async function Shop({ searchParams }: ShopPageProps) {
           <Breadcrumbs />
           <section className="products">
             <div className="products__inner d-flex jc-sb">
-              <button type="button" className="products__filter-btn" >
+              <button type="button" className="products__filter-btn">
                 <Image fill className="products__btn-svg" src="/images/icons/filter-btn.svg" alt="" />
               </button>
               <ul className="filters" id="filters">
@@ -215,21 +215,13 @@ async function Shop({ searchParams }: ShopPageProps) {
               <div className="shop-content">
                 <div className="shop-content__filter  d-flex jc-sb">
                   <div className="shop-content__buttons d-flex">
-                    <button 
-                    className="shop-content__btn button-grid shop-content__btn--active"
-                    type="button"
-                    
-                    >
+                    <button className="shop-content__btn button-grid shop-content__btn--active" type="button">
                       <svg className="shop-content__svg">
                         <use xlinkHref="sprite.svg#grid-filter-btn" />
                       </svg>
                       <span className="sr-only">Display products in grid</span>
                     </button>
-                    <button 
-                    className="shop-content__btn button-list d-flex jc-c ai-c"
-                    type="button"
-                    
-                    >
+                    <button className="shop-content__btn button-list d-flex jc-c ai-c" type="button">
                       <svg className="shop-content__svg">
                         <use xlinkHref="sprite.svg#grid-list-btn" />
                       </svg>
@@ -240,17 +232,25 @@ async function Shop({ searchParams }: ShopPageProps) {
                     <label>
                       {" "}
                       <span>Sort by:</span>
-                      <select name="" id="" className="shop-content__select-by select-style text-black">
-                        <option value={1}>Featured</option>
-                        <option value={1}>2</option>
-                        <option value={1}>3</option>
-                        <option value={1}>4</option>
+                      <select name="" id="" className="shop-content__select-by select-style text-black p-4">
+                        <option value={1}>
+                          <span className="p-4">Featured</span>
+                        </option>
+                        <option value={1}>
+                          <span className="p-4">2</span>
+                        </option>
+                        <option value={1}>
+                          <span className="p-4">3</span>
+                        </option>
+                        <option value={1}>
+                          <span className="p-4">4</span>
+                        </option>
                       </select>
                     </label>
                     <label>
                       {" "}
                       <span>Show:</span>
-                      <select name="" id="" className="shop-content__select-show select-style text-black">
+                      <select name="" id="" className="shop-content__select-show select-style text-black p-4">
                         <option value={1}>36</option>
                         <option value={1}>48</option>
                         <option value={1}>60</option>
