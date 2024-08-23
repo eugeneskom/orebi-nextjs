@@ -27,7 +27,7 @@ async function Shop({ searchParams }: ShopPageProps) {
   // console.log("productsData", productsData);
 
   const page = Number(searchParams.page) || 1;
-  const limit = Number(searchParams.limit) || 40;
+  const limit = Number(searchParams.limit) || 20;
   const search = searchParams.query || null;
   const category = searchParams.category;
   const minPrice = searchParams.minPrice ? Number(searchParams.minPrice) : undefined;
@@ -54,9 +54,9 @@ async function Shop({ searchParams }: ShopPageProps) {
           <Breadcrumbs />
           <section className="products">
             <div className="products__inner d-flex jc-sb">
-              <a className="products__filter-btn" href="#filters" >
+              <button type="button" className="products__filter-btn" >
                 <Image fill className="products__btn-svg" src="/images/icons/filter-btn.svg" alt="" />
-              </a>
+              </button>
               <ul className="filters" id="filters">
                 <li className="filters__item filters-category">
                   <div className="filters__top d-flex jc-sb">
@@ -240,7 +240,7 @@ async function Shop({ searchParams }: ShopPageProps) {
                     <label>
                       {" "}
                       <span>Sort by:</span>
-                      <select name="" id="" className="shop-content__select-by select-style">
+                      <select name="" id="" className="shop-content__select-by select-style text-black">
                         <option value={1}>Featured</option>
                         <option value={1}>2</option>
                         <option value={1}>3</option>
@@ -250,7 +250,7 @@ async function Shop({ searchParams }: ShopPageProps) {
                     <label>
                       {" "}
                       <span>Show:</span>
-                      <select name="" id="" className="shop-content__select-show select-style">
+                      <select name="" id="" className="shop-content__select-show select-style text-black">
                         <option value={1}>36</option>
                         <option value={1}>48</option>
                         <option value={1}>60</option>
@@ -259,6 +259,7 @@ async function Shop({ searchParams }: ShopPageProps) {
                     </label>
                   </form>
                 </div>
+                <h2 className="sr-only">Products list</h2>
                 <ul className="shop-products d-flex jc-sb fw-w">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {products.map((product) => (
