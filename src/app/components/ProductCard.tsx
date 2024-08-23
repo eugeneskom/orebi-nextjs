@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 const ProductCard = async ({ product }: ProductCardProps) => {
   // const [isHovered, setIsHovered] = useState(false);
-  const blurDataURL = await getBase64({ url: product.thumbnail });
+  // const blurDataURL = await getBase64({ url: product.thumbnail });
   return (
     <Link href={`/product/${product.id}-${product.title.toLowerCase().replace(/ /g, "-")}`} className="group flex flex-col h-full bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 ease-in-out hover:shadow-xl" 
     // onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
@@ -25,8 +25,8 @@ const ProductCard = async ({ product }: ProductCardProps) => {
             height={370} 
             style={{ maxWidth: "100%", height: "auto" }} 
             className="w-full h-full object-center object-cover"
-            placeholder="blur"
-            blurDataURL={blurDataURL as string}
+            // placeholder="blur"
+            // blurDataURL={blurDataURL as string}
           />
         </div>
         <div className={`absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-all duration-300 ease-in-out 
