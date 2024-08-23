@@ -11,8 +11,10 @@
     "@heroicons/react": "^2.1.5",
     "express": "^4.19.2",
     "next": "^14.2.5",
+    "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "sharp": "^0.33.5",
     "swiper": "^11.1.9",
     "use-debounce": "^10.0.3"
   },
