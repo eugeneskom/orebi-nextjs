@@ -37,7 +37,8 @@ const Hero = () => {
                     src={slide.image}
                     alt={`Slide ${slide.id}`}
                     fill
-                    style={{ objectFit: 'cover' }}
+                    objectFit="cover"
+                    priority={slide.id === 0}
                   />
                 </div>
                 <div className="container">
