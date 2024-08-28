@@ -15,7 +15,7 @@ function SearchForm() {
     } else {
       params.delete("query");
     }
-    console.log("handleSearch", term, params.toString());
+    // console.log("handleSearch", term, params.toString());
     router.push(`${pathname}?${params.toString()}`);
   }
 

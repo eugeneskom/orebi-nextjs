@@ -35,3 +35,10 @@ export interface Product {
   images: string[];
   thumbnail: string;
 }
+
+
+export interface Category {
+  slug: string;
+  name: string;
+  url: string;
+}

@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import ProductCard from "../components/ProductCard";
-import { Product } from "@/types/products";
-import { getProducts } from "@/libs";
+import { Category, Product } from "@/types/products";
+import { getAllCategories, getProducts } from "@/libs";
 import Search from "../components/Search";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Pagination from "../components/filters/Pagination";
+import AsideCategories from "../components/filters/AsideCategories";
 
 // Define the shape of the search params
 type SearchParams = {
@@ -43,7 +44,10 @@ async function Shop({ searchParams }: ShopPageProps) {
     maxPrice,
   });
 
-  // console.log("products", products.length);
+  const categories: Category[] = await getAllCategories();
+
+  // console.log("products", products);
+  // console.log("categories", categories);
 
   const totalPages = Math.ceil(total / limit);
   return (
@@ -64,64 +68,7 @@ async function Shop({ searchParams }: ShopPageProps) {
                   <div className="filters__top d-flex jc-sb">
                     <h2 className="filters__title">Shop by Categor</h2>
                   </div>
-                  <form className="accordion filters-category__form" action="#">
-                    <label className="filters__label d-flex fd-col">
-                      <span className="sr-only">Click to open sub menu</span>
-                      <input className="filters__input filters-category__input" type="checkbox" />
-                      <span className="accordion__btn filters__text">TV &amp; Video</span>
-                      <ul className="accordion__panel filters__sublist">
-                        <li className="accordion__item filters__subitem">
-                          <a className="filters__sublink" href="#">
-                            Smart TV
-                          </a>
-                        </li>
-                        <li className="accordion__item filters__subitem">
-                          <a className="filters__sublink" href="#">
-                            Stupid TV
-                          </a>
-                        </li>
-                        <li className="accordion__item filters__subitem">
-                          <a className="filters__sublink" href="#">
-                            Baclajan TV
-                          </a>
-                        </li>
-                      </ul>
-                    </label>
-                    <label className="filters__label d-flex jc-sb">
-                      <input className="filters__input filters-category__input" type="checkbox" />
-                      <span className="filters__text">Computers</span>
-                    </label>
-                    <label className="filters__label d-flex fd-col">
-                      <span className="sr-only">Click to open sub menu</span>
-                      <input className="filters__input filters-category__input" type="checkbox" />
-                      <span className="accordion__btn filters__text">Camera &amp; Photo</span>
-                      <ul className="accordion__panel filters__sublist">
-                        <li className="accordion__item filters__subitem">
-                          <a className="filters__sublink" href="#">
-                            Smart TV
-                          </a>
-                        </li>
-                        <li className="accordion__item filters__subitem">
-                          <a className="filters__sublink" href="#">
-                            Stupid TV
-                          </a>
-                        </li>
-                        <li className="accordion__item filters__subitem">
-                          <a className="filters__sublink" href="#">
-                            Baclajan TV
-                          </a>
-                        </li>
-                      </ul>
-                    </label>
-                    <label className="filters__label d-flex jc-sb">
-                      <input className="filters__input filters-category__input" type="checkbox" />
-                      <span className="filters__text">Wearable Technology</span>
-                    </label>
-                    <label className="filters__label d-flex jc-sb">
-                      <input className="filters__input filters-category__input" type="checkbox" />
-                      <span className="filters__text">Cell Phones</span>
-                    </label>
-                  </form>
+                  <AsideCategories categories={categories} />
                 </li>
                 <li className="filters__item filters-color">
                   <div className="filters__top d-flex jc-sb">
@@ -217,7 +164,7 @@ async function Shop({ searchParams }: ShopPageProps) {
               <div className="shop-content">
                 <div className="shop-content__filter  d-flex jc-sb">
                   <div className="shop-content__buttons d-flex">
-                    <button className="shop-content__btn button-grid shop-content__btn--active" type="button">
+                    <button className="shop-content__btn button-grid shop-content__btn--active flex justify-center items-center" type="button">
                       <svg className="shop-content__svg">
                         <use xlinkHref="sprite.svg#grid-filter-btn" />
                       </svg>

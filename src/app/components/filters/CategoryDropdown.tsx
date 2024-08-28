@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Category() {
+function CategoryDropdown() {
   return (
     <nav className="dropdown-menu js_drop" id="my-menu">
     Shop by Category
@@ -1060,4 +1060,4 @@ function Category() {
   )
 }
 
-export default Category
+export default CategoryDropdown

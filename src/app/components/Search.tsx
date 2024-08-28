@@ -1,5 +1,5 @@
 import React from "react";
-import Category from "./filters/Category";
+import Category from "./filters/CategoryDropdown";
 import SearchForm from "./filters/SearchForm";
 import { Suspense } from "react";
 import Image from "next/image";
