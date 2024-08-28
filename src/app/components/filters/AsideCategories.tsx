@@ -12,6 +12,8 @@ function AsideCategories({categories}: {categories: Category[]}) {
     const params = new URLSearchParams(searchParams);
     if (term) {
       params.set("category", term);
+      params.delete("page") // Reset page to 1 when category is changed
+      params.delete("query") // Reset search query when category is changed
     } else {
       params.delete("category");
     }
@@ -23,7 +25,7 @@ function AsideCategories({categories}: {categories: Category[]}) {
     <form className="accordion filters-category__form" action="#">
       {categories.slice(0,7).map((category) => (
         <label className="filters__label d-flex jc-sb" key={category.slug} 
-          onClick={() => onCategoryClick(category.name)}
+          onClick={() => onCategoryClick(category.slug)}
         >
           <input className="filters__input filters-category__input" type="checkbox" />
           <span className="filters__text">{category.name}</span>
