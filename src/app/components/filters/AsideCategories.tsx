@@ -9,7 +9,7 @@ function AsideCategories({categories}: {categories: Category[]}) {
   const router = useRouter();
 
   function onCategoryClick(term: string) {
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams as URLSearchParams);
     if (term) {
       params.set("category", term);
     } else {

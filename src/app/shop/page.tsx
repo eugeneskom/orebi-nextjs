@@ -7,6 +7,7 @@ import Search from "../components/Search";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Pagination from "../components/filters/Pagination";
 import AsideCategories from "../components/filters/AsideCategories";
+import ShowPerPage from "../components/filters/ShowPerPage";
 
 // Define the shape of the search params
 type SearchParams = {
@@ -188,16 +189,7 @@ async function Shop({ searchParams }: ShopPageProps) {
                         <option value={1}>4</option>
                       </select>
                     </label>
-                    <label>
-                      {" "}
-                      <span>Show:</span>
-                      <select name="" id="" className="shop-content__select-show select-style text-black p-4">
-                        <option value={1}>36</option>
-                        <option value={1}>48</option>
-                        <option value={1}>60</option>
-                        <option value={1}>72</option>
-                      </select>
-                    </label>
+                <ShowPerPage limit={limit}/>
                   </form>
                 </div>
                 <h2 className="sr-only">Products list</h2>
