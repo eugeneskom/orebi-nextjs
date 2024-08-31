@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import ProductCard from './ProductCard'
+import ProductCard from '../ProductCard';
 import { getProducts } from '@/libs';
 import { Product } from '@/types/products';
 

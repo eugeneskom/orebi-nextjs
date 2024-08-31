@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard";
 import sharedStyles from "../styles/sharedStyles.module.css";
 import { Product } from "@/types/products";
 import { getProducts } from "@/libs";

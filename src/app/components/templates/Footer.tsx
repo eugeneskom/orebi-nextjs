@@ -1,4 +1,7 @@
+import Image from 'next/image'
 import React from 'react'
+
+import logo from '/images/logo.svg'
 
 function Footer() {
   return (
@@ -109,7 +112,7 @@ function Footer() {
           </p>
         </address>
         <a href="#" className="logo footer__logo">
-          <img src="images/logo.svg" alt="logo of the website" />
+          <Image width={66} height={16} src={`/images/logo.svg`} alt="logo of the website" />
         </a>
       </div>
       <div className="footer__bottom d-flex jc-sb ai-c">

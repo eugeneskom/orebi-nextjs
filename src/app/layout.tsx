@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/templates/Header";
+import Footer from "./components/templates/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import './styles/globals.css';
 import './styles/style.min.css'
